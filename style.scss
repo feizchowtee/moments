@@ -22,19 +22,25 @@ body {
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
-*{
+
+* {
     box-sizing: border-box;
-    &:after, &:before{
+
+    &:after,
+    &:before {
         box-sizing: border-box;
     }
 }
-a{
-text-decoration: none;
-&:hover{
+
+a {
     text-decoration: none;
-    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
 }
-}
+
 ul {
     list-style: none;
     padding: 0;
@@ -67,129 +73,163 @@ h1 {
     font-family: 'Work Sans';
     color: $b;
 }
-.nav{
+
+.nav {
     padding: 50px 5%;
-    .logo{
+    height: 30px;
+
+    .logo {
         font-family: 'Source Serif Pro';
         font-weight: 700;
         color: $b;
         font-size: 24px;
     }
-    .menu{
+
+    .menu {
         display: flex;
-        li{
+
+        li {
             margin: 0 22px;
             color: $blue;
+
+            a {
+                font-family: 'Work Sans';
+                color: $b;
+            }
         }
     }
 }
 
-.download{
+.download {
     background: $b;
     height: 666px;
     padding: 0 5%;
-    h1{
+
+    h1 {
         color: $white;
     }
-    p{
+
+    p {
         color: $grey;
     }
 }
-.hero{
+
+.hero {
     min-height: 100vh;
-    padding:0 5%;
-    .content{
-        .img{
+    padding: 0 5%;
+
+    .content {
+        .img {
             margin-bottom: 60px;
+            background: url('./assets/hero-desktop.png');
+            height: 415px;
+            width: 812px;
         }
-        h1{
+
+        h1 {
             margin-bottom: 30px;
         }
-        p{
+
+        p {
             margin-bottom: 50px;
         }
     }
 }
-.uses{
+
+.uses {
     width: 100%;
     padding: 50px 5%;
     background: $white;
     margin-bottom: 208px;
-    h1{
+
+    h1 {
         margin-bottom: 50px;
     }
-    .row{
+
+    .row {
         width: 100%;
-        .use{
-            margin:0 7.625em;
-            p{
+
+        .use {
+            margin: 0 7.625em;
+
+            p {
                 text-align: center;
             }
         }
     }
 }
 
-.features{
+.features {
     padding: 0 5%;
     width: 100%;
     margin-bottom: 208px;
-    .feature{
-        .col-md-8{
+
+    .feature {
+        .col-md-8 {
             width: 812px;
             height: 600px;
             position: relative;
-            
-            
+
+
         }
-        .content{
-            h1{
+
+        .content {
+            h1 {
                 margin-bottom: 30px;
                 position: relative;
                 padding-bottom: 10px;
-             &:after{
-                 content: '';
-                 position: absolute;
-                 left: 0;
-                 bottom: 0;
-                 right: 0;
-                 width: 100%;
-                 height: 1px;
-                 background: $grey;
-                 opacity: .3;
-                 
-             }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: $grey;
+                    opacity: .3;
+
+                }
             }
-            p{
+
+            p {
                 margin-bottom: 50px;
             }
         }
 
     }
-    .feature-one{
-            margin-bottom: 110px;
-            .img{
-                min-height: 600px;
-                
-                background: url('./assets/feautre-one-desktop.png') no-repeat  center;
-                background-size: contain;
-            }
-            
+
+    .feature-one {
+        margin-bottom: 110px;
+
+        .img {
+            min-height: 600px;
+
+            background: url('./assets/feautre-one-desktop.png') no-repeat center;
+            background-size: contain;
         }
-        .feature-two{
-                    .img{
-                        height: 600px;
-                        
-                        background: url('./assets/feature-two-desktop.png') no-repeat center;
-                        background-size: contain;
-                    }
-            
+
+    }
+
+    .feature-two {
+        .img {
+            height: 600px;
+
+            background: url('./assets/feature-two-desktop.png') no-repeat center;
+            background-size: contain;
+        }
+
 
     }
 }
-.clients{
+
+.clients {
     height: 443px;
     margin-bottom: 208px;
-    img{
+    padding: 0 5%;
+
+    img {
         min-height: 300px;
     }
 }
@@ -197,36 +237,81 @@ h1 {
 
 
 
-.footer{
-    padding :40px 5%;
-    .credit{
-        p{
-            a{
+.footer {
+    padding: 40px 5%;
+
+    .credit {
+        p {
+            a {
                 color: $b;
                 padding-bottom: 4px;
                 border-bottom: 1px dashed $lb;
             }
         }
     }
-    .social{
-        ul{
-            li{
+
+    .social {
+        ul {
+            li {
                 margin: 0 20px;
             }
         }
     }
-    
+
 }
 
+@media screen and (max-width: 1024px) {
+    .hero {
+        .content {
+            .img {
+                background: url('./assets/hero-mobile.png');
+                width: 302px;
+                height: 201px;
+            }
+        }
+    }
+}
 
+@media screen and (max-width: 375px) {
+    .hero {
+        .content {
+            .img {
+                background: url('./assets/hero-mobile.png');
+                width: 302px;
+                height: 201px;
+            }
+        }
+    }
+    .uses{
+        .row{
+            .use{
+                margin:  50px 50px;
+            }
+        }
+    }
+    .feature {
+        .feature-one {
+            margin-bottom: 0px;
 
-@media screen and  (max-width: 375px){
+        }
+    }
 
-.footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}justify-content: center;
+    .clients {
+        margin-bottom: 80px;
+
+        img {
+            width: 90%;
+
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
 
 
 }

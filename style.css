@@ -10626,6 +10626,7 @@ h1 {
 
 .nav {
   padding: 50px 5%;
+  height: 30px;
 }
 
 .nav .logo {
@@ -10644,6 +10645,11 @@ h1 {
 .nav .menu li {
   margin: 0 22px;
   color: #007bff;
+}
+
+.nav .menu li a {
+  font-family: 'Work Sans';
+  color: #142D4C;
 }
 
 .download {
@@ -10667,6 +10673,9 @@ h1 {
 
 .hero .content .img {
   margin-bottom: 60px;
+  background: url("./assets/hero-desktop.png");
+  height: 415px;
+  width: 812px;
 }
 
 .hero .content h1 {
@@ -10753,6 +10762,7 @@ h1 {
 .clients {
   height: 443px;
   margin-bottom: 208px;
+  padding: 0 5%;
 }
 
 .clients img {
@@ -10773,7 +10783,32 @@ h1 {
   margin: 0 20px;
 }
 
+@media screen and (max-width: 1024px) {
+  .hero .content .img {
+    background: url("./assets/hero-mobile.png");
+    width: 302px;
+    height: 201px;
+  }
+}
+
 @media screen and (max-width: 375px) {
+  .hero .content .img {
+    background: url("./assets/hero-mobile.png");
+    width: 302px;
+    height: 201px;
+  }
+  .uses .row .use {
+    margin: 50px 50px;
+  }
+  .feature .feature-one {
+    margin-bottom: 0px;
+  }
+  .clients {
+    margin-bottom: 80px;
+  }
+  .clients img {
+    width: 90%;
+  }
   .footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10785,8 +10820,8 @@ h1 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
