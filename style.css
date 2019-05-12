@@ -10617,7 +10617,7 @@ h1 {
   background: #A9EEC2;
   width: 225px;
   height: 52px;
-  padding: 10px 20px;
+  padding: .8em;
   text-decoration: none;
   border-radius: 52px;
   font-family: 'Work Sans';
@@ -10656,13 +10656,20 @@ h1 {
   background: #142D4C;
   height: 666px;
   padding: 0 5%;
+  text-align: center;
+}
+
+.download .img {
+  margin-bottom: 50px;
 }
 
 .download h1 {
   color: #f5f5f5;
+  margin-bottom: 20px;
 }
 
 .download p {
+  margin-bottom: 30px;
   color: #B5b5b5;
 }
 
@@ -10715,7 +10722,7 @@ h1 {
   margin-bottom: 208px;
 }
 
-.features .feature .col-md-8 {
+.features .feature .img {
   width: 812px;
   height: 600px;
   position: relative;
@@ -10748,7 +10755,7 @@ h1 {
 }
 
 .features .feature-one .img {
-  min-height: 600px;
+  height: 600px;
   background: url("./assets/feautre-one-desktop.png") no-repeat center;
   background-size: contain;
 }
@@ -10760,13 +10767,18 @@ h1 {
 }
 
 .clients {
-  height: 443px;
-  margin-bottom: 208px;
-  padding: 0 5%;
+  width: 90%;
+  margin: 0 auto 208px auto;
 }
 
-.clients img {
-  min-height: 300px;
+.clients .content {
+  width: 100%;
+}
+
+.clients .content .img {
+  width: 90vw;
+  height: 300px;
+  background-image: url("./assets/Clients.png");
 }
 
 .footer {
@@ -10783,6 +10795,7 @@ h1 {
   margin: 0 20px;
 }
 
+/*-----Repsonsive------------------------------*/
 @media screen and (max-width: 1024px) {
   .hero .content .img {
     background: url("./assets/hero-mobile.png");
@@ -10792,22 +10805,85 @@ h1 {
 }
 
 @media screen and (max-width: 375px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 5%;
+  }
+  nav .logo {
+    font-size: 16px;
+  }
+  nav .menu li a {
+    font-size: 14px;
+  }
   .hero .content .img {
     background: url("./assets/hero-mobile.png");
     width: 302px;
     height: 201px;
   }
+  .uses {
+    margin-bottom: 50px;
+  }
   .uses .row .use {
     margin: 50px 50px;
   }
-  .feature .feature-one {
-    margin-bottom: 0px;
+  .features {
+    margin-top: 0;
+    padding: 0 5%;
+  }
+  .features .feature {
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .features .feature .img {
+    margin: 0px 0px;
+    width: 100%;
+    height: 268px;
+    margin: 0 auto 20px auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+  }
+  .features .feature .content {
+    margin-top: 0;
+  }
+  .features .feature-one {
+    margin-bottom: 50px;
   }
   .clients {
     margin-bottom: 80px;
+    width: 100%;
   }
-  .clients img {
+  .clients .content {
     width: 90%;
+  }
+  .clients .content .img {
+    margin: 20px auto;
+    width: 302px;
+    height: 66.42px;
+    background: url("./assets/Clients.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .footer {
     display: -webkit-box;
@@ -10823,5 +10899,9 @@ h1 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    text-align: center;
+  }
+  .footer * {
+    text-align: center;
   }
 }

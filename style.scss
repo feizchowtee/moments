@@ -67,7 +67,7 @@ h1 {
     background: $g;
     width: 225px;
     height: 52px;
-    padding: 10px 20px;
+    padding: .8em;
     text-decoration: none;
     border-radius: 52px;
     font-family: 'Work Sans';
@@ -104,12 +104,19 @@ h1 {
     background: $b;
     height: 666px;
     padding: 0 5%;
+    text-align: center;
+
+    .img {
+        margin-bottom: 50px;
+    }
 
     h1 {
         color: $white;
+        margin-bottom: 20px;
     }
 
     p {
+        margin-bottom: 30px;
         color: $grey;
     }
 }
@@ -165,7 +172,7 @@ h1 {
     margin-bottom: 208px;
 
     .feature {
-        .col-md-8 {
+        .img {
             width: 812px;
             height: 600px;
             position: relative;
@@ -204,8 +211,7 @@ h1 {
         margin-bottom: 110px;
 
         .img {
-            min-height: 600px;
-
+            height: 600px;
             background: url('./assets/feautre-one-desktop.png') no-repeat center;
             background-size: contain;
         }
@@ -225,13 +231,19 @@ h1 {
 }
 
 .clients {
-    height: 443px;
-    margin-bottom: 208px;
-    padding: 0 5%;
+    width: 90%;
+    margin: 0 auto 208px auto;
+    
+    .content{
+        width: 100%;
+        .img{
+            width: 90vw;
+         height: 300px;
+         background-image: url('./assets/Clients.png');
+        }
 
-    img {
-        min-height: 300px;
     }
+
 }
 
 
@@ -260,6 +272,10 @@ h1 {
 
 }
 
+
+/*-----Repsonsive------------------------------*/
+
+
 @media screen and (max-width: 1024px) {
     .hero {
         .content {
@@ -273,6 +289,26 @@ h1 {
 }
 
 @media screen and (max-width: 375px) {
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 5%;
+
+        .logo {
+            font-size: 16px;
+        }
+
+        .menu {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
     .hero {
         .content {
             .img {
@@ -282,25 +318,72 @@ h1 {
             }
         }
     }
-    .uses{
-        .row{
-            .use{
-                margin:  50px 50px;
+
+    .uses {
+        margin-bottom: 50px;
+
+        .row {
+            .use {
+                margin: 50px 50px;
             }
         }
     }
-    .feature {
-        .feature-one {
-            margin-bottom: 0px;
 
+    .features {
+        margin-top: 0;
+        padding: 0 5%;
+
+        .feature {
+
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .img {
+                margin: 0px 0px;
+                width: 100%;
+                height: 268px;
+                margin: 0 auto 20px auto;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                // /background-position: center;
+                padding: 0;
+
+            }
+
+            .content {
+                margin-top: 0;
+
+
+            }
         }
+
+        .feature-one {
+            margin-bottom: 50px;
+        }
+
+
+
     }
 
     .clients {
         margin-bottom: 80px;
+        width: 100%;
 
-        img {
+        .content {
             width: 90%;
+
+            .img {
+                margin: 20px auto;
+                width: 302px;
+                height: 66.42px;
+                background: url('./assets/Clients.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
 
         }
     }
@@ -310,6 +393,11 @@ h1 {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
+
+        * {
+            text-align: center;
+        }
 
     }
 
