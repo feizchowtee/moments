@@ -74,30 +74,45 @@ h1 {
     color: $b;
 }
 
-.nav {
-    padding: 50px 5%;
-    height: 30px;
+.navigation {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .logo {
-        font-family: 'Source Serif Pro';
-        font-weight: 700;
-        color: $b;
-        font-size: 24px;
+    .logo-container {
+        margin-left: 5%;
+
+        .logo {
+            font-family: 'Source Serif Pro';
+            font-weight: 700;
+            color: $b;
+            font-size: 16px;
+        }
+
     }
 
-    .menu {
-        display: flex;
+    .menu-container {
+        margin-right: 5%;
 
-        li {
-            margin: 0 22px;
-            color: $blue;
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            a {
-                font-family: 'Work Sans';
-                color: $b;
+            li {
+                margin: 0 22px;
+                color: $blue;
+
+                a {
+                    font-family: 'Work Sans';
+                    color: $b;
+                }
             }
         }
     }
+
 }
 
 .download {
@@ -221,7 +236,6 @@ h1 {
     .feature-two {
         .img {
             height: 600px;
-
             background: url('./assets/feature-two-desktop.png') no-repeat center;
             background-size: contain;
         }
@@ -233,13 +247,17 @@ h1 {
 .clients {
     width: 90%;
     margin: 0 auto 208px auto;
-    
-    .content{
-        width: 100%;
-        .img{
-            width: 90vw;
-         height: 300px;
-         background-image: url('./assets/Clients.png');
+
+    .content {
+        width: 90%;
+
+        .img {
+            width: 1364px;
+            height: 300px;
+            background-image: url('./assets/Clients.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
     }
@@ -276,38 +294,10 @@ h1 {
 /*-----Repsonsive------------------------------*/
 
 
-@media screen and (max-width: 1024px) {
-    .hero {
-        .content {
-            .img {
-                background: url('./assets/hero-mobile.png');
-                width: 302px;
-                height: 201px;
-            }
-        }
-    }
-}
 
 @media screen and (max-width: 375px) {
 
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0 5%;
 
-        .logo {
-            font-size: 16px;
-        }
-
-        .menu {
-            li {
-                a {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
 
     .hero {
         .content {
@@ -331,7 +321,7 @@ h1 {
 
     .features {
         margin-top: 0;
-        padding: 0 5%;
+        padding: 0 15%;
 
         .feature {
 

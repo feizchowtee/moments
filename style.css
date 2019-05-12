@@ -10624,30 +10624,53 @@ h1 {
   color: #142D4C;
 }
 
-.nav {
-  padding: 50px 5%;
-  height: 30px;
-}
-
-.nav .logo {
-  font-family: 'Source Serif Pro';
-  font-weight: 700;
-  color: #142D4C;
-  font-size: 24px;
-}
-
-.nav .menu {
+.navigation {
+  width: 100%;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.nav .menu li {
+.navigation .logo-container {
+  margin-left: 5%;
+}
+
+.navigation .logo-container .logo {
+  font-family: 'Source Serif Pro';
+  font-weight: 700;
+  color: #142D4C;
+  font-size: 16px;
+}
+
+.navigation .menu-container {
+  margin-right: 5%;
+}
+
+.navigation .menu-container .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigation .menu-container .menu li {
   margin: 0 22px;
   color: #007bff;
 }
 
-.nav .menu li a {
+.navigation .menu-container .menu li a {
   font-family: 'Work Sans';
   color: #142D4C;
 }
@@ -10772,13 +10795,16 @@ h1 {
 }
 
 .clients .content {
-  width: 100%;
+  width: 90%;
 }
 
 .clients .content .img {
-  width: 90vw;
+  width: 1364px;
   height: 300px;
   background-image: url("./assets/Clients.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer {
@@ -10796,33 +10822,7 @@ h1 {
 }
 
 /*-----Repsonsive------------------------------*/
-@media screen and (max-width: 1024px) {
-  .hero .content .img {
-    background: url("./assets/hero-mobile.png");
-    width: 302px;
-    height: 201px;
-  }
-}
-
 @media screen and (max-width: 375px) {
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0 5%;
-  }
-  nav .logo {
-    font-size: 16px;
-  }
-  nav .menu li a {
-    font-size: 14px;
-  }
   .hero .content .img {
     background: url("./assets/hero-mobile.png");
     width: 302px;
@@ -10836,7 +10836,7 @@ h1 {
   }
   .features {
     margin-top: 0;
-    padding: 0 5%;
+    padding: 0 15%;
   }
   .features .feature {
     margin-bottom: 0;
